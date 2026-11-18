@@ -7,18 +7,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --bg:       #faf8ff;
-    --bg2:      #f5f0ff;
-    --lavender: #9b7fe8;
-    --lav-mid:  #b89df0;
-    --lav-pale: #e8e0fb;
-    --pink:     #e06f9b;
-    --pink-pale:#fce7f0;
-    --pink-mid: #f0a0c0;
-    --text:     #2d2540;
-    --muted:    #7a6e92;
-    --border:   #e4daf5;
-    --card:     #ffffff;
+    --bg:       #230812;
+    --bg2:      #2e0b19;
+    --lavender: #ff7eb0;
+    --lav-mid:  #c24a7c;
+    --lav-pale: #55192f;
+    --pink:     #ffb3d1;
+    --pink-pale:#4a1226;
+    --pink-mid: #d4648f;
+    --text:     #ffd9e8;
+    --muted:    #d99ab5;
+    --border:   #6a2441;
+    --card:     #3a1021;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -28,7 +28,7 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
     padding: 1rem 3.5rem;
-    background: rgba(250,248,255,0.92); backdrop-filter: blur(14px);
+    background: rgba(35,8,18,0.92); backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
   }
   .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--lavender); }
@@ -40,8 +40,8 @@
     min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
     padding: 7rem 3.5rem 4rem; position: relative; overflow: hidden;
   }
-  .hero-blob { position: absolute; top: -15%; right: -8%; width: 650px; height: 650px; border-radius: 50%; background: radial-gradient(circle, rgba(155,127,232,0.13) 0%, transparent 68%); pointer-events: none; }
-  .hero-blob2 { position: absolute; bottom: -8%; left: -5%; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(224,111,155,0.1) 0%, transparent 68%); pointer-events: none; }
+  .hero-blob { position: absolute; top: -15%; right: -8%; width: 650px; height: 650px; border-radius: 50%; background: radial-gradient(circle, rgba(255,126,176,0.13) 0%, transparent 68%); pointer-events: none; }
+  .hero-blob2 { position: absolute; bottom: -8%; left: -5%; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(232,96,143,0.1) 0%, transparent 68%); pointer-events: none; }
   .hero-inner { max-width: 820px; position: relative; z-index: 1; }
   .hero-pill {
     display: inline-flex; align-items: center; gap: 8px;
@@ -60,11 +60,11 @@
   .hero-sub { font-size: 1.08rem; color: var(--muted); margin: 1.2rem 0 2.2rem; max-width: 520px; animation: fadeUp 0.6s 0.2s ease both; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.6s 0.3s ease both; }
   .btn-primary {
-    background: var(--lavender); color: #fff; padding: 0.72rem 1.8rem; border-radius: 8px;
+    background: var(--lavender); color: #2a0a14; padding: 0.72rem 1.8rem; border-radius: 8px;
     text-decoration: none; font-weight: 600; font-size: 0.88rem;
-    transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(155,127,232,0.35);
+    transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(255,126,176,0.35);
   }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 26px rgba(155,127,232,0.5); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 26px rgba(255,126,176,0.5); }
   .btn-outline {
     background: transparent; color: var(--lavender); border: 1.5px solid var(--lav-mid);
     padding: 0.72rem 1.8rem; border-radius: 8px; text-decoration: none;
@@ -105,7 +105,7 @@
 
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1.1rem; max-width: 940px; }
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem 1.4rem; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
-  .skill-card:hover { border-color: var(--lav-mid); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(155,127,232,0.1); }
+  .skill-card:hover { border-color: var(--lav-mid); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(255,126,176,0.1); }
   .skill-card-title { font-size: 0.67rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--pink); margin-bottom: 0.85rem; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.38rem; }
   .skill-tag { background: var(--bg2); border: 1px solid var(--border); color: var(--text); padding: 0.2rem 0.62rem; border-radius: 6px; font-size: 0.77rem; }
@@ -113,11 +113,11 @@
   #projects { background: var(--bg2); }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; max-width: 940px; }
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
-  .project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(155,127,232,0.12); border-color: var(--lav-mid); }
+  .project-card:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(255,126,176,0.12); border-color: var(--lav-mid); }
   .project-top { height: 118px; display: flex; align-items: center; justify-content: center; }
-  .p1 { background: linear-gradient(135deg, var(--lav-pale), #ede8ff); }
-  .p2 { background: linear-gradient(135deg, var(--pink-pale), #ffe4f0); }
-  .p3 { background: linear-gradient(135deg, #eaf4fb, var(--lav-pale)); }
+  .p1 { background: linear-gradient(135deg, var(--lav-pale), #3d1226); }
+  .p2 { background: linear-gradient(135deg, var(--pink-pale), #4a1530); }
+  .p3 { background: linear-gradient(135deg, #3d1226, var(--lav-pale)); }
   .project-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
   .project-body { padding: 1.3rem; flex: 1; display: flex; flex-direction: column; }
   .project-title { font-weight: 600; font-size: 0.96rem; margin-bottom: 0.42rem; color: var(--text); }
@@ -131,7 +131,7 @@
   .edu-item { display: grid; grid-template-columns: 88px 1fr; gap: 1.5rem; padding-bottom: 2.5rem; position: relative; }
   .edu-item:not(:last-child)::after { content: ''; position: absolute; left: 44px; top: 28px; width: 1px; bottom: 0; background: var(--border); }
   .edu-year { font-size: 0.72rem; color: var(--muted); padding-top: 0.2rem; text-align: right; line-height: 1.5; }
-  .edu-dot { position: absolute; left: 37px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: #fff; border: 2px solid var(--lavender); box-shadow: 0 0 0 3px rgba(155,127,232,0.15); }
+  .edu-dot { position: absolute; left: 37px; top: 5px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--lavender); box-shadow: 0 0 0 3px rgba(255,126,176,0.15); }
   .edu-content { padding-left: 1rem; }
   .edu-degree { font-weight: 600; font-size: 0.96rem; margin-bottom: 0.2rem; color: var(--text); }
   .edu-school { color: var(--lavender); font-size: 0.86rem; margin-bottom: 0.22rem; font-weight: 500; }
@@ -140,7 +140,7 @@
   #experience { background: var(--bg2); }
   .exp-grid { display: flex; flex-direction: column; gap: 1.1rem; max-width: 760px; }
   .exp-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1.6rem; display: grid; grid-template-columns: 1fr auto; gap: 0.4rem; transition: border-color 0.2s, box-shadow 0.2s; }
-  .exp-card:hover { border-color: var(--lav-mid); box-shadow: 0 6px 20px rgba(155,127,232,0.08); }
+  .exp-card:hover { border-color: var(--lav-mid); box-shadow: 0 6px 20px rgba(255,126,176,0.08); }
   .exp-role { font-weight: 600; font-size: 0.96rem; color: var(--text); }
   .exp-org { color: var(--lavender); font-size: 0.86rem; margin-top: 0.2rem; font-weight: 500; }
   .exp-desc { font-size: 0.83rem; color: var(--muted); margin-top: 0.7rem; grid-column: 1/-1; line-height: 1.65; }
@@ -148,7 +148,7 @@
 
   .interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 1rem; max-width: 760px; }
   .interest-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 1.4rem 1rem; text-align: center; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
-  .interest-card:hover { transform: translateY(-3px); border-color: var(--pink-mid); box-shadow: 0 6px 20px rgba(224,111,155,0.1); }
+  .interest-card:hover { transform: translateY(-3px); border-color: var(--pink-mid); box-shadow: 0 6px 20px rgba(232,96,143,0.1); }
   .interest-icon-box { width: 40px; height: 40px; border-radius: 10px; background: var(--pink-pale); border: 1px solid var(--pink-mid); display: flex; align-items: center; justify-content: center; margin: 0 auto 0.7rem; }
   .interest-icon-box svg { width: 18px; height: 18px; stroke: var(--pink); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
   .interest-title { font-weight: 600; font-size: 0.88rem; color: var(--text); margin-bottom: 0.22rem; }
@@ -204,7 +204,7 @@
   <div class="hero-inner">
     <div class="hero-pill"><div class="pill-dot"></div> Available for opportunities &nbsp;·&nbsp; Hyderabad, Telangana</div>
     <h1 class="hero-name">Laasya Sri<br><em>Gummadi</em></h1>
-    <p class="hero-sub">AI Student &nbsp;·&nbsp; Web Developer — building things that matter.</p>
+    <p class="hero-sub">AI Student &nbsp;·&nbsp; LLM &amp; Full-Stack Developer — building things that matter.</p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="#contact" class="btn-outline">Get in Touch</a>
@@ -223,28 +223,28 @@
     <div class="about-grid">
       <div>
         <p class="about-bio">
-          I'm a passionate <strong>3rd-year B.Tech AI student</strong> at Mahindra University, Hyderabad,
-          with a keen interest in NLP, deep learning, front end development and full-stack web development.
-          I love building projects that solve real-world problems and am always eager to learn and collaborate.
+          I'm a passionate <strong>final-year B.Tech AI student</strong> at Mahindra University, Hyderabad,
+          who builds end-to-end LLM and NLP applications, from FastAPI backends and REST APIs to React dashboards.
+          I'm interested in LLM applications, RAG pipelines and model evaluation, and I'm a co-author of a Springer-published deep learning paper (ICMEET-2026).
           I've interned at <strong>Fint Solutions</strong> and participated in the <strong>Hiroshima University Immersion Program, Japan</strong>.
         </p>
         <div class="about-details">
           <div class="detail-row"><span class="detail-key">Name</span><span class="detail-val">Laasya Sri Gummadi</span></div>
           <div class="detail-row"><span class="detail-key">Student ID</span><span class="detail-val">SE23UARI044</span></div>
           <div class="detail-row"><span class="detail-key">Branch</span><span class="detail-val">B.Tech Artificial Intelligence</span></div>
-          <div class="detail-row"><span class="detail-key">Year</span><span class="detail-val">3rd Year (2023–2027)</span></div>
+          <div class="detail-row"><span class="detail-key">Year</span><span class="detail-val">Final Year (2023–2027)</span></div>
           <div class="detail-row"><span class="detail-key">University</span><span class="detail-val">Mahindra University</span></div>
           <div class="detail-row"><span class="detail-key">Location</span><span class="detail-val">Hyderabad, Telangana</span></div>
         </div>
         <div class="badge-row">
-          <span class="badge">AI / ML</span><span class="badge">Web Dev</span><span class="badge">NLP</span>
-          <span class="badge">Cybersecurity</span><span class="badge">Open Source</span>
+          <span class="badge">AI / ML</span><span class="badge">LLMs &amp; RAG</span><span class="badge">NLP</span>
+          <span class="badge">Full-Stack</span><span class="badge">Research</span>
         </div>
       </div>
     </div>
     <div class="hero-stats" style="margin-top:2.5rem;">
-      <div class="hero-stat"><div class="num">7.08</div><div class="label">CGPA / 10</div></div>
-      <div class="hero-stat"><div class="num">3</div><div class="label">Projects Built</div></div>
+      <div class="hero-stat"><div class="num">7.22</div><div class="label">CGPA / 10</div></div>
+      <div class="hero-stat"><div class="num">4</div><div class="label">Projects Built</div></div>
       <div class="hero-stat"><div class="num">1</div><div class="label">Internship</div></div>
     </div>
   </div>
@@ -258,11 +258,11 @@
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
-      <div class="skill-card"><div class="skill-card-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">SQL</span><span class="skill-tag">MATLAB</span></div></div>
-      <div class="skill-card"><div class="skill-card-title">AI / ML</div><div class="skill-tags"><span class="skill-tag">Deep Learning</span><span class="skill-tag">NLP</span><span class="skill-tag">BERT</span><span class="skill-tag">BiLSTM</span></div></div>
-      <div class="skill-card"><div class="skill-card-title">Web</div><div class="skill-tags"><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React.js</span><span class="skill-tag">REST APIs</span></div></div>
-      <div class="skill-card"><div class="skill-card-title">Tools</div><div class="skill-tags"><span class="skill-tag">Git &amp; GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Canva</span><span class="skill-tag">SolidWorks</span><span class="skill-tag">AutoCAD</span></div></div>
-      <div class="skill-card"><div class="skill-card-title">Concepts</div><div class="skill-tags"><span class="skill-tag">OOP</span><span class="skill-tag">Data Structures</span><span class="skill-tag">Databases</span><span class="skill-tag">File I/O</span></div></div>
+      <div class="skill-card"><div class="skill-card-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">SQL</span><span class="skill-tag">C</span></div></div>
+      <div class="skill-card"><div class="skill-card-title">AI / ML</div><div class="skill-tags"><span class="skill-tag">LLMs</span><span class="skill-tag">RAG</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">NLP</span><span class="skill-tag">BERT</span><span class="skill-tag">Hugging Face</span><span class="skill-tag">Embeddings</span><span class="skill-tag">Semantic Search</span><span class="skill-tag">CNNs / Transfer Learning</span></div></div>
+      <div class="skill-card"><div class="skill-card-title">Backend &amp; Web</div><div class="skill-tags"><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">React.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">MongoDB</span><span class="skill-tag">UI/UX Design</span></div></div>
+      <div class="skill-card"><div class="skill-card-title">Tools</div><div class="skill-tags"><span class="skill-tag">Git &amp; GitHub</span><span class="skill-tag">Docker (basics)</span><span class="skill-tag">Linux</span><span class="skill-tag">Postman</span><span class="skill-tag">VS Code</span></div></div>
+      <div class="skill-card"><div class="skill-card-title">Concepts</div><div class="skill-tags"><span class="skill-tag">OOP</span><span class="skill-tag">Data Structures</span><span class="skill-tag">DBMS</span><span class="skill-tag">Operating Systems</span><span class="skill-tag">Computer Networks</span></div></div>
     </div>
   </div>
 </section>
@@ -275,7 +275,6 @@
       <div class="section-line"></div>
     </div>
     <div class="projects-grid">
-
       <div class="project-card">
         <div class="project-top p1">
           <div class="project-icon" style="background:var(--lav-pale);border:1px solid var(--border);">
@@ -283,22 +282,22 @@
           </div>
         </div>
         <div class="project-body">
-          <div class="project-title">Smart Resume Matcher</div>
-          <div class="project-desc">NLP-based system using BERT &amp; BiLSTM to intelligently match resumes with job descriptions and improve hiring accuracy.</div>
-          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">BERT</span><span class="project-tag">BiLSTM</span><span class="project-tag">NLP</span></div>
+          <div class="project-title">VendorClear AI</div>
+          <div class="project-desc">LLM-powered vendor compliance platform with semantic search, cutting manual review time by 60%+. Built the backend and security: four-role RBAC, audit trails, approval workflows and an AI chat assistant grounded in live compliance data.</div>
+          <div class="project-tags"><span class="project-tag">FastAPI</span><span class="project-tag">React</span><span class="project-tag">MongoDB</span><span class="project-tag">LLMs</span></div>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-top p2">
-          <div class="project-icon" style="background:var(--pink-pale);border:1px solid #f0c0d5;">
+          <div class="project-icon" style="background:var(--pink-pale);border:1px solid var(--border);">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
           </div>
         </div>
         <div class="project-body">
-          <div class="project-title">Smart Resume Maker</div>
-          <div class="project-desc">OOP-based Java application for automated resume generation, producing clean, formatted documents from structured user input.</div>
-          <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">OOP</span><span class="project-tag">File I/O</span></div>
+          <div class="project-title">Skin Lesion Classification</div>
+          <div class="project-desc">Fine-tuned ResNet18 on the 7-class HAM10000 dataset with class-balanced training, evaluated at the lesion level to avoid data leakage. Accepted at ICMEET-2026, Bali (Springer proceedings).</div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Deep Learning</span><span class="project-tag">ResNet18</span></div>
         </div>
       </div>
 
@@ -309,9 +308,22 @@
           </div>
         </div>
         <div class="project-body">
-          <div class="project-title">Smart Task Manager</div>
-          <div class="project-desc">Full-featured web app built with HTML, CSS, JavaScript — includes task creation, status tracking, and REST API integration.</div>
-          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">REST API</span></div>
+          <div class="project-title">AI Resume Matcher</div>
+          <div class="project-desc">Resume-to-job matching pipeline using BERT embeddings and cosine similarity, ranking 5,000+ candidate records by semantic fit against job requirements.</div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">NLP</span><span class="project-tag">BERT</span><span class="project-tag">Embeddings</span></div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top p1">
+          <div class="project-icon" style="background:var(--lav-pale);border:1px solid var(--border);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--lavender)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Smart Wireless Sensor Monitoring System</div>
+          <div class="project-desc">Analysed large-scale IoT sensor telemetry with ML to spot network performance patterns in near real time.</div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">IoT</span><span class="project-tag">Machine Learning</span></div>
         </div>
       </div>
 
@@ -328,12 +340,12 @@
     </div>
     <div class="edu-timeline">
       <div class="edu-item">
-        <div class="edu-year">2023–<br>Present</div>
+        <div class="edu-year">2023–<br>2027</div>
         <div class="edu-dot"></div>
         <div class="edu-content">
           <div class="edu-degree">B.Tech — Artificial Intelligence</div>
           <div class="edu-school">Mahindra University, Hyderabad</div>
-          <div class="edu-detail">CGPA: 7.08 / 10 (till 5th semester) &nbsp;·&nbsp; Courses: ML, Deep Learning, Data Structures, DBMS</div>
+          <div class="edu-detail">CGPA: 7.22 / 10 &nbsp;·&nbsp; Courses: ML, Deep Learning, DSA, OOP, DBMS, Operating Systems, Computer Networks</div>
         </div>
       </div>
       <div class="edu-item">
@@ -367,9 +379,9 @@
     </div>
     <div class="exp-grid">
       <div class="exp-card">
-        <div><div class="exp-role">AI Developer Intern</div><div class="exp-org">Fint Solutions</div></div>
-        <div class="exp-duration">1 month</div>
-        <div class="exp-desc">Worked on AI-based solutions for fintech, assisting in development and quality assurance processes. Gained hands-on experience with real-world AI product development.</div>
+        <div><div class="exp-role">AI / Software Development Intern</div><div class="exp-org">Fint Solutions</div></div>
+        <div class="exp-duration">Jan – Feb 2026</div>
+        <div class="exp-desc">Built and tested 12+ Python backend modules and integrated secure REST APIs for enterprise software. Debugged and validated data flows to reduce errors before production releases, and automated repetitive testing workflows with Git in an Agile team.</div>
       </div>
       <div class="exp-card">
         <div><div class="exp-role">International Immersion Program</div><div class="exp-org">Hiroshima University, Japan</div></div>
@@ -395,7 +407,7 @@
     <div class="interests-grid">
       <div class="interest-card">
         <div class="interest-icon-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3c0 0 4 4 4 9s-4 9-4 9M3 12h18"/></svg></div>
-        <div class="interest-title">Tennis</div><div class="interest-sub">Active club player</div>
+        <div class="interest-title">Tennis</div><div class="interest-sub">State-level player</div>
       </div>
       <div class="interest-card">
         <div class="interest-icon-box"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M4 20L20 4"/></svg></div>
@@ -407,7 +419,7 @@
       </div>
       <div class="interest-card">
         <div class="interest-icon-box"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
-        <div class="interest-title">Arts &amp; Artifacts</div><div class="interest-sub">Creative expression</div>
+        <div class="interest-title">Arts &amp; Artifacts</div><div class="interest-sub">2nd place, international art competition</div>
       </div>
       <div class="interest-card">
         <div class="interest-icon-box"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
@@ -457,7 +469,7 @@
 
 <footer>
   <strong>Laasya Sri Gummadi</strong> &nbsp;·&nbsp; SE23UARI044 &nbsp;·&nbsp; Mahindra University
-  <div>Built with HTML &amp; CSS &nbsp;·&nbsp; 2025</div>
+  <div>Built with HTML &amp; CSS &nbsp;·&nbsp; 2026</div>
 </footer>
 
 <script>
